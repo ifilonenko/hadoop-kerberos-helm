@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: dn1
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: hdfs-dn1
+    spec:
+      hostNetwork: true
+      hostPID: true
+      containers:
+      - command:
+        - /start-datanode.sh
+        name: dn1
+        image: hadoop-base:latest
+        volumeMounts:
+        - mountPath: /var/keytabs
+          name: server-keytab
+      restartPolicy: Always
+      volumes:
+      - name: server-keytab
+        persistentVolumeClaim:
+          claimName: server-keytab
