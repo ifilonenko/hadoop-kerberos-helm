@@ -6,7 +6,7 @@ docker build -t hadoop-base:latest -f Dockerfile .
 ```
 #### 3. Start PVCs
 ```
-helm install -n hdfs-pvcs pvc
+helm install -n hdfs-pvs pv
 ```
 #### 4. Start Pods
 ```
