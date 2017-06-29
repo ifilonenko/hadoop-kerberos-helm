@@ -18,9 +18,9 @@ spec:
         image: hadoop-base:latest
         volumeMounts:
         - mountPath: /var/keytabs
-          name: server-keytab
+          name: kerb-keytab
       restartPolicy: Always
       volumes:
-      - name: server-keytab
+      - name: kerb-keytab
         persistentVolumeClaim:
           claimName: server-keytab

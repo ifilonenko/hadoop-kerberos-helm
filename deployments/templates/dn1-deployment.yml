@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: dn1
+  name: hdfs-dn1
 spec:
   replicas: 1
   template:
@@ -18,9 +18,9 @@ spec:
         image: hadoop-base:latest
         volumeMounts:
         - mountPath: /var/keytabs
-          name: server-keytab
+          name: dn1-keytab
       restartPolicy: Always
       volumes:
-      - name: server-keytab
+      - name: dn1-keytab
         persistentVolumeClaim:
           claimName: server-keytab

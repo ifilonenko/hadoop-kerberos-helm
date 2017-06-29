@@ -20,14 +20,14 @@ spec:
         image: hadoop-base:latest
         volumeMounts:
         - mountPath: /var/keytabs
-          name: server-keytab
+          name: nn-keytab
         - mountPath: /hadoop
-          name: nn-server
+          name: nn-hadoop
       restartPolicy: Always
       volumes:
-      - name: server-keytab
+      - name: nn-keytab
         persistentVolumeClaim:
           claimName: server-keytab
-      - name: nn-server
+      - name: nn-hadoop
         persistentVolumeClaim:
           claimName: nn-server
