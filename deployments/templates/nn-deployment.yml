@@ -18,6 +18,7 @@ spec:
         ports:
         - containerPort: 9000
         image: hadoop-base:latest
+        imagePullPolicy: IfNotPresent
         volumeMounts:
         - mountPath: /var/keytabs
           name: nn-keytab

@@ -4,11 +4,18 @@
 ```
 docker build -t hadoop-base:latest -f Dockerfile .
 ```
-#### 3. Start PVCs
+Push the image to your repository unless using a local cluster.
+
+#### 3. Minikube setup
+
+If you are using minikube, create the paths:
+`/tmp/nn` and `/tmp/keytab` on your host machine.
+
+#### 4. Start PVCs
 ```
 helm install -n hdfs-pvs pv
 ```
-#### 4. Start Pods
+#### 5. Start Pods
 ```
 helm install -n hdfs-pods deployments
 ```
