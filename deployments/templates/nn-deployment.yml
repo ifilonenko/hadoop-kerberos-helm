@@ -31,4 +31,4 @@ spec:
           claimName: server-keytab
       - name: nn-hadoop
         persistentVolumeClaim:
-          claimName: nn-server
+          claimName: nn-hadoop
