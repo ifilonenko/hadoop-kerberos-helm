@@ -2,12 +2,15 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: hdfs-dn1
+  labels:
+    kerberosService: kerberos
 spec:
   replicas: 1
   template:
     metadata:
       labels:
         name: hdfs-dn1
+        kerberosService: kerberos
     spec:
       hostNetwork: true
       hostPID: true
