@@ -6,9 +6,8 @@ metadata:
     kerberosService: kerberos
   name: kerberos
 spec:
-  clusterIP: None
   ports:
-  - name: headless
+  - name: "kerberos"
     port: 55555
     targetPort: 0
   selector:

@@ -6,9 +6,8 @@ metadata:
     kerberosService: dn1
   name: dn1
 spec:
-  clusterIP: None
   ports:
-  - name: headless
+  - name: "dn1"
     port: 55555
     targetPort: 0
   selector:

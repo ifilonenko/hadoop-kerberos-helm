@@ -3,14 +3,14 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    keerberosService: nn
+    kerberosService: nn
   name: nn
 spec:
   ports:
-  - name: "9000"
+  - name: "nn"
     port: 9000
     targetPort: 9000
   selector:
-    keerberosService: nn
+    kerberosService: nn
 status:
   loadBalancer: {}

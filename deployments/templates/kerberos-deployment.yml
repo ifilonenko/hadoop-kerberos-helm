@@ -12,8 +12,6 @@ spec:
         name: hdfs-kerberos
         kerberosService: kerberos
     spec:
-      hostNetwork: true
-      hostPID: true
       containers:
       - command:
         - /start-kdc.sh

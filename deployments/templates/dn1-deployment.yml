@@ -12,8 +12,6 @@ spec:
         name: hdfs-dn1
         kerberosService: kerberos
     spec:
-      hostNetwork: true
-      hostPID: true
       containers:
       - command:
         - /start-datanode.sh

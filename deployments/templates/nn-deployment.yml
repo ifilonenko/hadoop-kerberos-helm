@@ -12,8 +12,6 @@ spec:
         name: hdfs-nn
         kerberosService: nn
     spec:
-      hostNetwork: true
-      hostPID: true
       containers:
       - command:
         - /start-namenode.sh
