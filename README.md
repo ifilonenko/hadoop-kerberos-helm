@@ -22,6 +22,7 @@ helm install -n hdfs-pods deployments
 #### 6. Run kinit in NameNode
 ```
 kubectl exec -it <POD_NAME> -- /bin/bash
+su hdfs
 kinit -kt /var/keytabs/hdfs.keytab hdfs/nn.default.svc.cluster.local
 hdfs dfs -ls /
 ```
