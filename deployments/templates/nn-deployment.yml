@@ -6,6 +6,8 @@ spec:
   replicas: 1
   template:
     metadata:
+      annotations:
+        pod.beta.kubernetes.io/hostname: nn
       labels:
         name: hdfs-nn
         kerberosService: nn

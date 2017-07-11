@@ -6,9 +6,11 @@ spec:
   replicas: 1
   template:
     metadata:
+      annotations:
+        pod.beta.kubernetes.io/hostname: dn1
       labels:
         name: hdfs-dn1
-        kerberosService: kerberos
+        kerberosService: dn1
     spec:
       containers:
       - command:

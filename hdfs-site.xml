@@ -40,11 +40,11 @@
   </property>
   <property>
     <name>dfs.namenode.kerberos.principal</name>
-    <value>hdfs/_HOST@EXAMPLE.COM</value>
+    <value>hdfs/_HOST@CLUSTER.LOCAL</value>
   </property>
   <property>
     <name>dfs.namenode.kerberos.internal.spnego.principal</name>
-    <value>HTTP/_HOST@EXAMPLE.COM</value>
+    <value>HTTP/_HOST@CLUSTER.LOCAL</value>
   </property>
 
 
@@ -88,11 +88,11 @@
   </property>
   <property>
     <name>dfs.namenode.kerberos.principal</name>
-    <value>hdfs/_HOST@EXAMPLE.COM</value>
+    <value>hdfs/_HOST@CLUSTER.LOCAL</value>
   </property>
   <property>
     <name>dfs.namenode.kerberos.internal.spnego.principal</name>
-    <value>HTTP/_HOST@EXAMPLE.COM</value>
+    <value>HTTP/_HOST@CLUSTER.LOCAL</value>
   </property>
 
 
@@ -106,7 +106,7 @@
   </property>
   <property>
     <name>dfs.datanode.kerberos.principal</name>
-    <value>hdfs/_HOST@EXAMPLE.COM</value>
+    <value>hdfs/_HOST@CLUSTER.LOCAL</value>
   </property>
 
   <!-- Web Authentication config -->
@@ -116,7 +116,7 @@
   </property>
   <property>
     <name>dfs.web.authentication.kerberos.principal</name>
-    <value>HTTP/_HOST@EXAMPLE.COM</value>
+    <value>HTTP/_HOST@CLUSTER.LOCAL</value>
   </property>
   <property>
     <name>dfs.web.authentication.kerberos.keytab</name>

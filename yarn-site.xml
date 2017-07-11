@@ -21,6 +21,6 @@
   <!-- (hardcoded to use this ID as the renewer) -->
   <property>
     <name>yarn.resourcemanager.principal</name>
-    <value>yarn/_HOST@EXAMPLE.COM</value>
+    <value>yarn/_HOST@CLUSTER.LOCAL</value>
   </property>
 </configuration>

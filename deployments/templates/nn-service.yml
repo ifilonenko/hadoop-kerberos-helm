@@ -1,15 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    service.alpha.kubernetes.io/tolerate-unready-endpoints: "true"
   labels:
     kerberosService: nn
   name: nn
 spec:
+  clusterIP: None
   ports:
   - protocol: TCP
     port: 9000
     targetPort: 9000
   selector:
     kerberosService: nn
-  type: ExternalName
-  externalName: nn.example.com
