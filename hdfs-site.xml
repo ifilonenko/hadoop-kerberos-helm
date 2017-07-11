@@ -40,11 +40,11 @@
   </property>
   <property>
     <name>dfs.namenode.kerberos.principal</name>
-    <value>hdfs/_HOST@EXAMPLE.COM</value>
+    <value>hdfs/nn.default.svc.cluster.local@CLUSTER.LOCAL</value>
   </property>
   <property>
     <name>dfs.namenode.kerberos.internal.spnego.principal</name>
-    <value>HTTP/_HOST@EXAMPLE.COM</value>
+    <value>HTTP/nn.default.svc.cluster.local@CLUSTER.LOCAL</value>
   </property>
 
 
@@ -88,11 +88,17 @@
   </property>
   <property>
     <name>dfs.namenode.kerberos.principal</name>
-    <value>hdfs/_HOST@EXAMPLE.COM</value>
+    <value>hdfs/nn.default.svc.cluster.local@CLUSTER.LOCAL</value>
   </property>
   <property>
     <name>dfs.namenode.kerberos.internal.spnego.principal</name>
-    <value>HTTP/_HOST@EXAMPLE.COM</value>
+    <value>HTTP/nn.default.svc.cluster.local@CLUSTER.LOCAL</value>
+  </property>
+
+  <!-- prevent those errors -->
+  <property>
+    <name>dfs.namenode.datanode.registration.ip-hostname-check</name>
+    <value>false</value>
   </property>
 
 
@@ -106,7 +112,7 @@
   </property>
   <property>
     <name>dfs.datanode.kerberos.principal</name>
-    <value>hdfs/_HOST@EXAMPLE.COM</value>
+    <value>hdfs/dn1.default.svc.cluster.local@CLUSTER.LOCAL</value>
   </property>
 
   <!-- Web Authentication config -->
@@ -116,7 +122,7 @@
   </property>
   <property>
     <name>dfs.web.authentication.kerberos.principal</name>
-    <value>HTTP/_HOST@EXAMPLE.COM</value>
+    <value>HTTP/dn1.default.svc.cluster.local@CLUSTER.LOCAL</value>
   </property>
   <property>
     <name>dfs.web.authentication.kerberos.keytab</name>

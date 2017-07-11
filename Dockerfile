@@ -20,6 +20,7 @@ COPY core-site.xml /hadoop/etc/hadoop/
 COPY hdfs-site.xml /hadoop/etc/hadoop/
 COPY ssl-server.xml /hadoop/etc/hadoop/
 COPY yarn-site.xml /hadoop/etc/hadoop/
+COPY krb5.conf /etc/
 
 COPY start-namenode.sh /
 COPY start-datanode.sh /
