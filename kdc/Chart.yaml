@@ -1,0 +1,3 @@
+name: hadoop-kerberos
+description: Helm chart for a single-noded, pseudodistributed, keberized, Hadoop cluster
+version: 1.0

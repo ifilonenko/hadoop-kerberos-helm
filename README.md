@@ -1,5 +1,5 @@
 ### Bloomberg Big Data and NoSQL Platform
-#### 1. Build Hadoop distro
+#### 1. Build Hadoop distro of version 2.7.3
 #### 2. Build docker image 
 ```
 docker build -t hadoop-base:latest -f Dockerfile .
@@ -16,10 +16,27 @@ If you are using minikube, create the paths:
 helm install -n hdfs-pvs pv
 ```
 #### 5. Start Pods
+
+a. KDC Node
 ```
-helm install -n hdfs-pods deployments
+helm install -n hdfs-kdc kdc
 ```
-#### 6. Run kinit in NameNode
+b. NN Node
+```
+helm install -n hdfs-nn namenode
+```
+
+c. DN Node
+```
+helm install -n hdfs-dn datanode
+```
+
+d. DataPopulator Node
+```
+helm install -n hdfs-dp datapopulator
+```
+
+#### 6. Run kinit in any node
 ```
 kubectl exec -it <POD_NAME> -- /bin/bash
 su hdfs
