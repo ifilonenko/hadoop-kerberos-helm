@@ -46,16 +46,20 @@
     <name>dfs.namenode.kerberos.internal.spnego.principal</name>
     <value>HTTP/nn.default.svc.cluster.local@CLUSTER.LOCAL</value>
   </property>
+  <property>
+    <name>dfs.namenode.rpc-address</name>
+    <value>nn.default.svc.cluster.local:9000</value>
+  </property>
 
 
   <!-- For testing, we want tokens to expire FAST -->
   <property>
     <name>dfs.namenode.delegation.token.max-lifetime</name>
-    <value>18000000</value> <!-- 300 minutes -->
+    <value>3600000</value><!-- 1 hour -->
   </property>
   <property>
     <name>dfs.namenode.delegation.token.renew-interval</name>
-    <value>1800000</value> <!-- 30 minutes -->
+    <value>3600000</value><!-- 1 hour -->
   </property>
 
 
@@ -65,7 +69,6 @@
     <name>dfs.data.transfer.protection</name>
     <value>integrity</value>
   </property>
-   
   <property>
     <name>dfs.datanode.address</name>
     <value>0.0.0.0:10019</value>
@@ -100,11 +103,21 @@
     <name>dfs.namenode.datanode.registration.ip-hostname-check</name>
     <value>false</value>
   </property>
-
-
   <property>
     <name>dfs.datanode.data.dir.perm</name>
     <value>700</value> 
+  </property>
+  <property>
+    <name>dfs.namenode.name.dir</name>
+    <value>file:///hadoop/etc/data</value>
+  </property>
+  <property>
+    <name>dfs.datanode.name.dir</name>
+    <value>file:///hadoop/etc/data</value>
+  </property>
+  <property>
+    <name>dfs.data.dir</name>
+    <value>file:///hadoop/etc/data</value>
   </property>
   <property>
     <name>dfs.datanode.keytab.file</name>
@@ -113,6 +126,18 @@
   <property>
     <name>dfs.datanode.kerberos.principal</name>
     <value>hdfs/dn1.default.svc.cluster.local@CLUSTER.LOCAL</value>
+  </property>
+  <property>
+    <name>dfs.encrypt.data.transfer</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>dfs.encrypt.data.transfer.cipher.suites</name>
+    <value>AES/CTR/NoPadding</value>
+  </property>
+  <property>
+    <name>dfs.encrypt.data.transfer.cipher.key.bitlength</name>
+    <value>256</value>
   </property>
 
   <!-- Web Authentication config -->

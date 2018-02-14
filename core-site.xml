@@ -31,4 +31,9 @@
     <name>fs.defaultFS</name>
     <value>hdfs://nn.default.svc.cluster.local:9000</value>
   </property>
+
+  <property>
+    <name>hadoop.rpc.protection</name>
+    <value>authentication</value>
+  </property>
 </configuration>
